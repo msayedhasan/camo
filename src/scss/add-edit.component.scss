@@ -1,0 +1,46 @@
+@import './abstracts/variables';
+
+:host {
+  display         : block;
+  background-color: $main-background-color;
+}
+
+.content {
+  border-radius   : 10px;
+  background-color: $card-body;
+  border          : 1px solid $border;
+  padding-bottom  : 15px !important;
+  margin-bottom   : 20px;
+  box-shadow      : 0 0px 8px 1px rgba(0, 0, 0, 0.05);
+  margin-top      : 20px
+}
+
+.title {
+  font-size       : 22px;
+  font-weight     : 700;
+  color           : $color1;
+  margin-bottom   : 15px;
+  background-color: $card-header-bg;
+  border-bottom   : 1px solid $border;
+  padding         : 10px !important;
+  border-radius: 10px;
+}
+
+button {
+  margin   : 0 10px;
+  font-size: 16px;
+}
+
+.textarea-maxWidth {
+  max-width: 81.7%;
+}
+
+:host ::ng-deep app-ng2tel .iti.iti--allow-dropdown {
+  width: 100%
+}
+.activeModalIcon{
+  // background: #46b8da !important;
+   background: #1f1a5f !important;
+  border-radius: 10px;
+
+}

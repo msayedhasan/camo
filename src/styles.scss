@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+// @import "~@ng-select/ng-select/themes/default.theme.css";
+
+@import "./scss/abstracts/variables";
+@import "./scss/base/reset";
+@import "./scss/components/checkbox";
+@import "./scss/components/input";
+@import "./scss/components/button";
+@import "./scss/layout/grid";
+@import "./scss/custom.scss";
+
+html,
+body {
+  height: 100%;
+  background-color: white;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.cdk-overlay-container {
+  z-index: 10000 !important;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

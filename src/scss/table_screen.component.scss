@@ -1,0 +1,332 @@
+@import "../../../../../../scss/abstracts/variables.scss";
+
+:host {
+    display: block;
+    background-color: $main-background-color;
+}
+
+:host ::ng-deep {
+    border-radius: 10px;
+    .data-table-header {
+        padding: 8px 8px;
+        margin-bottom: 0 !important;
+        background-color: $card-header-bg;
+        border: 1px solid $border;
+        border-bottom: none;
+        color: $font-color;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        button {
+            padding-top: 0;
+        }
+    }
+
+    .data-table-box {
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 30px;
+        border: 1px solid $data-table-border;
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+    .data-table {
+        box-shadow: none;
+        // font-size : $data-table-body;
+        border: 1px solid $data-table-border;
+        color: $font-color;
+
+        thead {
+            border-bottom: 1px solid #999;
+            font-size: $data-table-header-1920;
+
+            @media (max-width: 1366px) {
+                font-size: $data-table-header-1366;
+            }
+        }
+
+        tbody {
+            font-size: $data-table-body-1920;
+
+            @media (max-width: 1366px) {
+                font-size: $data-table-body-1366;
+            }
+
+            td,
+            th {
+                // border-top: 0;
+                font-size: 13px;
+                // color: rgba($color1, 0.8);
+                color: #555353;
+                font-weight: initial;
+                &.index-column {
+                    font-weight: bold;
+                }
+                &[data-label="Status"] {
+                    // padding: 0;
+                    span {
+                        display: block;
+                        color: white;
+                        margin: 2px 0;
+                        border-radius: 10px;
+                        &.blocked {
+                            background-color: grey;
+                        }
+                        &.deleted {
+                            background-color: rgb(255, 107, 107);
+                        }
+                        &.confirmed {
+                            background-color: $color1;
+                        }
+                        &.active {
+                            background-color: #28a745;
+                        }
+                        &.pending {
+                            background-color: #a0a02e;
+                        }
+                        &.done {
+                            background-color: #044970; //$color2;
+                        }
+                    }
+                }
+            }
+
+            img {
+                border: 1px solid $border;
+            }
+        }
+    }
+
+    .data-table-wrapper {
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.05);
+        margin-bottom: 20px;
+    }
+
+    .h4.title {
+        font-weight: bold;
+        margin: 0;
+        font-size: $card-header-font;
+    }
+
+    data-table-pagination > div {
+        justify-content: center !important;
+    }
+}
+
+label {
+    font-size: $label-font;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn.search {
+    margin: 0 5px;
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        padding: 2px 0;
+    }
+
+    span:last-child {
+        display: none;
+
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+/***** */
+
+:host {
+    width: 100%;
+}
+
+:host ::ng-deep {
+    caption {
+        display: none;
+    }
+
+    thead tr {
+        height: 40px;
+        background-color: #f6f6f6;
+        // color: $color1;
+        color: #555658;
+        th {
+            padding: 1rem 0;
+        }
+    }
+    tbody th,
+    tbody td {
+        padding: 0.35rem;
+    }
+    .row-odd {
+        background-color: #f9f9f9 !important;
+    }
+
+    .data-table-row:hover {
+        background-color: $card-header-bg !important;
+    }
+
+    .data-table-box {
+        background-color: $data-table-box;
+        border: 1px solid $border;
+        margin-bottom: 10px;
+    }
+
+    .table td,
+    .table th {
+        border-top: 1px solid $data-table-border;
+    }
+
+    .table thead th,
+    .data-table > thead > tr > td {
+        border-bottom: none;
+    }
+
+    th {
+        vertical-align: middle;
+        text-align: center;
+        font-weight: $font-weight-600;
+        //background-color: $gray2;
+    }
+
+    td {
+        vertical-align: middle;
+        text-align: center;
+        &.index-column {
+            font-weight: bold;
+            font-size: 13px;
+        }
+    }
+
+    .pagination-range {
+        display: none;
+    }
+
+    .pagination-box {
+        padding-bottom: 12px;
+        zoom: 75%;
+        align-items: center;
+        width: 95%;
+
+        .input-group {
+            .form-control {
+                display: flex !important;
+                width: auto !important;
+                height: auto;
+            }
+
+            select {
+                border-radius: 0;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+    }
+
+    .index-column-header {
+        span::after {
+            content: "ID";
+        }
+    }
+}
+
+a {
+    padding: 0 2px;
+    border: 0;
+    transition: all 0.5s;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    i {
+        font-size: 20px;
+    }
+
+    &.pencil {
+        color: $color1;
+    }
+
+    &.trash {
+        color: $trash-color;
+    }
+
+    &.lock {
+        color: $color2;
+    }
+
+    &.note {
+        color: $color5;
+    }
+}
+
+:host ::ng-deep bs-tooltip-container .tooltip-inner {
+    background-color: $color1;
+    color: $white;
+}
+
+:host ::ng-deep bs-tooltip-container .tooltip-arrow:before,
+:host ::ng-deep bs-tooltip-container .tooltip-arrow {
+    border-top-color: $color1;
+}
+
+.product-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 15px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid $gray2;
+}
+.description-card {
+    position: relative;
+    width: 85%;
+    height: 100px;
+    background-color: $color1;
+    border-radius: 10px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    p {
+        width: 100%;
+        &:first-of-type {
+            font-weight: bold;
+        }
+    }
+    .bar {
+        position: absolute;
+        width: 20px;
+        height: 30px;
+        top: 0;
+        right: 25px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: $color2;
+    }
+}
+.card {
+    border-radius: 10px;
+    .card-header {
+        border-radius: 10px;
+    }
+    .card-body {
+        border-radius: 10px;
+    }
+}

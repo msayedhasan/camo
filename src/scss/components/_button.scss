@@ -1,0 +1,110 @@
+@import '../abstracts/variables';
+
+.dropdown-menu {
+  padding     : 0;
+  color       : #555 !important;
+  border-color: $border;
+
+  li {
+    border-bottom: 1px solid $border;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  a {
+    color  : inherit;
+    padding: 10px 0;
+
+    &:active {
+      background-color: $card-header-bg;
+    }
+  }
+}
+
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.btn {
+  display               : inline-block;
+  font-weight           : 400;
+  text-align            : center;
+  white-space           : nowrap;
+  vertical-align        : middle;
+  -webkit-user-select   : none;
+  -moz-user-select      : none;
+  -ms-user-select       : none;
+  user-select           : none;
+  border                : 1px solid transparent;
+  padding               : 4px 12px !important;
+  font-size             : 14px;
+  // line-height        : 1.5;
+  font-weight           : bold;
+  border-radius         : .25rem;
+  transition            : color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+  &.round {
+    border-radius: 20px;
+  }
+
+  &.cancel {
+    background-color: rgba(#f00, 0.65);
+    color           : white !important;
+  }
+
+  &.submit {
+    background-color: green;
+    color: white;
+  }
+  &.color1 {
+    background-color: rgba($color1, 0.85);
+    color           : white !important;
+
+    &:hover {
+      background-color: rgba($color1, 1);
+    }
+
+    &:disabled {
+      &:hover {
+        background-color: rgba($color1, 0.85);
+      }
+    }
+  }
+
+  &.color2 {
+    background-color: rgba($color2, 0.85);
+    color           : white !important;
+
+    &:hover {
+      background-color: rgba($color2, 1);
+      color           : #666 !important
+    }
+  }
+
+  &.color5 {
+    background-color: rgba($color5, 0.85);
+    color           : white !important;
+
+    &:hover {
+      background-color: rgba($color5, 1);
+      color           : #666 !important
+    }
+  }
+
+  &.btn-outline-secondary {
+    color : inherit;
+    border: 1px solid #e2e2e2;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+button,
+select {
+  text-transform: none;
+}
